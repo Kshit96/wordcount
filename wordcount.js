@@ -1,6 +1,7 @@
-export const wordCount = (inputString) =>{
+export const wordCount = (sentence) =>{
 
-  let words=inputString.split(" ");
+
+  let words=sentence.split(" ");
   var wordCountMap= new Map ();
 
 
