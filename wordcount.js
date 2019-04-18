@@ -1,7 +1,8 @@
 export const wordCount = (sentence) => {
 
   let trimmedSentence = sentence.trim();
-  let words = trimmedSentence.split(" ");
+  let letterOnlySentence = trimmedSentence.replace(/[^A-Za-z0-9 ]/,"");
+  let words = letterOnlySentence.split(" ");
   var wordCountMap = new Map();
   for (var word of words) {
     if(word !== " " && word!=="") {
