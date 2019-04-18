@@ -25,5 +25,8 @@ describe("wordcount", () => {
     let expectedWordCountMap = new Map([["Hello", 1], ["World", 1]]);
     expect(wordCount("Hello \n World")).toEqual(expectedWordCountMap);
   });
-
+  test("should ignore case sensitivity", ()=> {
+    let expectedWordCountMap = new Map([["Hello", 3], ["World", 1]]);
+    expect(wordCount("Hello HELLO HELLo World")).toEqual(expectedWordCountMap);
+  });
 });
