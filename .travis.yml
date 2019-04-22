@@ -1,8 +1,3 @@
 language: node_js
 node_js:
   - "6.9.0"
-script:
-  - npm test
-  - npm install --ignore-scipts
-  on:
-    branch: master
